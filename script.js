@@ -37,23 +37,6 @@ function game() {
   console.log(playRound(playerChoice, getComputerChoice()));
   console.log(`Win: ${win} Loss: ${loss} Tie: ${tie}`);
 
-  playerChoice = prompt("What do you choose('rock', 'paper', 'scissors')");
-  console.log(playRound(playerChoice, getComputerChoice()));
-  console.log(`Win: ${win} Loss: ${loss} Tie: ${tie}`);
-
-  playerChoice = prompt("What do you choose('rock', 'paper', 'scissors')");
-  console.log(playRound(playerChoice, getComputerChoice()));
-  console.log(`Win: ${win} Loss: ${loss} Tie: ${tie}`);
-
-  playerChoice = prompt("What do you choose('rock', 'paper', 'scissors')");
-  console.log(playRound(playerChoice, getComputerChoice()));
-  console.log(`Win: ${win} Loss: ${loss} Tie: ${tie}`);
-
-  playerChoice = prompt("What do you choose('rock', 'paper', 'scissors')");
-  console.log(playRound(playerChoice, getComputerChoice()));
-  console.log(`Win: ${win} Loss: ${loss} Tie: ${tie}`);
-
-
   let result;
   if (win === loss) {
     result = "It's a Tie!";
