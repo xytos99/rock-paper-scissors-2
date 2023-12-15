@@ -29,12 +29,26 @@ let win = 0;
 let loss = 0;
 let tie = 0;
 
+let body = document.querySelector('body');
+
+body.addEventListener('click', (e) => {
+  let target = e.target;
+
+  switch(target.id) {
+    case 'rock':
+      console.log(playRound('rock', getComputerChoice()));
+      break;
+    case 'paper':
+      console.log(playRound('paper', getComputerChoice()));
+      break;
+    case 'scissors':
+      console.log(playRound('scissors', getComputerChoice()));
+      break;
+  }
+})
+
 function game() {
-
-  let playerChoice;
-
-  playerChoice = prompt("What do you choose('rock', 'paper', 'scissors')");
-  console.log(playRound(playerChoice, getComputerChoice()));
+  
   console.log(`Win: ${win} Loss: ${loss} Tie: ${tie}`);
 
   let result;
