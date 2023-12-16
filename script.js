@@ -31,25 +31,29 @@ let tie = 0;
 
 let body = document.querySelector('body');
 let result = document.querySelector('#result');
+const score = document.querySelector('#score');
 
 body.addEventListener('click', (e) => {
   let target = e.target;
-
+  
   switch(target.id) {
     case 'rock':
       result.textContent = playRound('rock', getComputerChoice());
+      score.textContent = `Win: ${win} | Loss: ${loss} | Tie: ${tie}`;
       break;
     case 'paper':
       result.textContent = playRound('paper', getComputerChoice());
+      score.textContent = `Win: ${win} | Loss: ${loss} | Tie: ${tie}`;
       break;
     case 'scissors':
       result.textContent = playRound('scissors', getComputerChoice());
+      score.textContent = `Win: ${win} | Loss: ${loss} | Tie: ${tie}`;
       break;
   }
 })
 
 function game() {
-  
+
 
 }
 
