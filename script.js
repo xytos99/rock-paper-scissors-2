@@ -32,8 +32,23 @@ let tie = 0;
 let body = document.querySelector('body');
 let result = document.querySelector('#result');
 const score = document.querySelector('#score');
+const finalResult = document.querySelector('#finalResult');
 
-body.addEventListener('click', (e) => {
+function getResult(playerScore, computerScore) {
+  let buttons = document.querySelectorAll('button');
+
+  if (playerScore >= 5) {
+    buttons.forEach((button) => button.disabled = true);
+    finalResult.textContent = `You win the game! Congratulations! 
+    Please reload the page to play again`;
+  } else if (computerScore >= 5) {
+    buttons.forEach((button) => button.disabled = true);
+    finalResult.textContent = `You lose the game! Better luck next time. 
+    Please reload the page to play again.`
+  }
+}
+
+body.addEventListener('click', (e) => { 
   let target = e.target;
   
   switch(target.id) {
@@ -50,11 +65,5 @@ body.addEventListener('click', (e) => {
       score.textContent = `Win: ${win} | Loss: ${loss} | Tie: ${tie}`;
       break;
   }
+  getResult(win, loss);
 })
-
-function game() {
-
-
-}
-
-game();
